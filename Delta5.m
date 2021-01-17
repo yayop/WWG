@@ -2,18 +2,21 @@
 %Author : Edgardo Rosas
 %Project : Water Waveguiding (WWG)
 %% Parameters
-% b : Inner curvature radii
+% b : Inner curvature radius
 % f : Frecuency
 % omega : Angular freciency
 % h0 : Fluid layer depth out waveguide
 % hg : Fluid layer depth in waveguide
+% g : Acceleration of gravity
+% delta : Waveguide width
 
 b = 5:2.5:100;
 f = 2:0.5:5;
 omega = 2*pi*f;
-g = 980;
 h0 = 2.5;
 hg = 1.5;
+g = 980;
+delta = 5.0;
 %% Waveguide band modes
 syms k w
 RelDisp_0(w, k) = w^2-g*k*tanh(k*h0);
